@@ -1,3 +1,5 @@
+#vel vajag noformet pasas zinas saturu, lai visas rindas aizsuta
+print("Skripta sakums")
 try:
 	import json #json faila apstradei
 	import random
@@ -10,13 +12,15 @@ try:
 	smtp_server = "smtp.gmail.com"
 	sender_email = "vards.uzvards.69420@gmail.com"  # Enter your address
 	receiver_email = "arnis.prieditis19@gmail.com"  # Enter receiver address
+	
+	saraksts = '/home/arnis/Python-mail/insults.json' #saraksts ar objektiem {"text": "", "used": 0}
 
 	#atver un ielade sarakstu ar novelejumiem
-	f = open('/home/arnis/Python-mail/insults.json', 'r')
+	f = open(saraksts, 'r')
 	insults = json.load(f)
 	f.close()
 
-	print("atvera json failu")
+	print("atvera json failu") #parbaudei
 
 	#lai parbauditu, vai ir vel neaizsutiti velejumi
 	unused = filter(lambda elem: elem['used'] == 0, insults)
@@ -42,10 +46,10 @@ try:
 
 		#nomaina izlietotas zinas statusu ('used':0 -> 'used':1) un ieraksta to json failaa
 		insults[pos]['used'] = 1
-		f = open('/home/arnis/Python-mail/insults.json', 'w')
+		f = open(saraksts, 'w')
 		json.dump(insults, f)
 		f.close()
 except Exception as e:
 	print(e)
 finally:
-	print("tika lidz beigam")
+	print("tika lidz beigam") #parbaudei
