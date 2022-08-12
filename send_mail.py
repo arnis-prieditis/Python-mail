@@ -1,5 +1,5 @@
 #vel vajag noformet pasas zinas saturu, lai visas rindas aizsuta
-print("Skripta sakums")
+print("<Skripta sakums>") #parbaudei
 try:
 	import json #json faila apstradei
 	import random
@@ -52,4 +52,4 @@ try:
 except Exception as e:
 	print(e)
 finally:
-	print("tika lidz beigam") #parbaudei
+	print("</tika lidz beigam>") #parbaudei
