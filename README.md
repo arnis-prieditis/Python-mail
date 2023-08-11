@@ -9,4 +9,4 @@ Varbūt drošības pēc to vajadzētu glabāt atsevišķā failā, idk.
 
 Lai projekts nostrādātu līdz galam, jātiek galā ar vēl 2 problēmām:
   1) Ziņas teksta formatēšana - pagaidām piemērā, kur ir 2 rindas, tiek nosūtīta tikai 2. rinda.
-  2) VPS servisa atrašana, kas ļautu vismaz dažus mēnešus par brīvu izmantot virtuālu serveri, uz kura uzlikt un automatizēt šo skriptu.
+  2) VPS servisa atrašana, kas ļautu vismaz dažus mēnešus par brīvu izmantot virtuālu serveri, uz kura uzlikt un automatizēt šo skriptu.Vai arī pats tādu uztaisi.
