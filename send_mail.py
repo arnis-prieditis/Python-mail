@@ -3,10 +3,11 @@ import os
 import json #json faila apstradei
 import random
 import smtplib, ssl #epasta sutisanai
+from email.message import EmailMessage
+
 try:
 	#mainigie epasta lietam
 	port = 465  # For SSL
-
 	smtp_server = "smtp.gmail.com"
 	sender_email = "vards.uzvards.69420@gmail.com"  # Enter your address
 	receiver_email = "arnis.prieditis19@gmail.com"  # Enter receiver address
@@ -34,12 +35,20 @@ try:
 		saturs = insults[pos]['text']
 		print(saturs)
 
+		# zinas noformesana
+		msg = EmailMessage()
+		msg['Subject'] = 'Weekly Motivational Message'
+		msg['From'] = sender_email
+		msg['To'] = receiver_email
+		msg.set_content(saturs)
+
 		#zinas nosutisana ar smtplib un ssl
 		parole = 'wfsfltjdgnrtbtdn' #app password
 		context = ssl.create_default_context()
 		with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
 			server.login(sender_email, parole)
-			server.sendmail(sender_email, receiver_email, saturs)
+			#server.sendmail(sender_email, receiver_email, saturs)
+			server.send_message(msg)
 
 		#nomaina izlietotas zinas statusu ('used':0 -> 'used':1) un ieraksta to json failaa
 		insults[pos]['used'] = 1
