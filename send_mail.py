@@ -1,11 +1,9 @@
 #vel vajag noformet pasas zinas saturu, lai visas rindas aizsuta
-print("<Skripta sakums>") #parbaudei
+import os
+import json #json faila apstradei
+import random
+import smtplib, ssl #epasta sutisanai
 try:
-	import json #json faila apstradei
-	import random
-
-	import smtplib, ssl #epasta sutisanai
-
 	#mainigie epasta lietam
 	port = 465  # For SSL
 
@@ -13,14 +11,13 @@ try:
 	sender_email = "vards.uzvards.69420@gmail.com"  # Enter your address
 	receiver_email = "arnis.prieditis19@gmail.com"  # Enter receiver address
 	
-	saraksts = '/home/arnis/Python-mail/insults.json' #saraksts ar objektiem {"text": "", "used": 0}
+	dir = os.path.dirname(os.path.abspath(__file__))
+	saraksts = dir + '/insults.json' #saraksts ar objektiem {"text": "", "used": 0}
 
 	#atver un ielade sarakstu ar novelejumiem
 	f = open(saraksts, 'r')
 	insults = json.load(f)
 	f.close()
-
-	print("atvera json failu") #parbaudei
 
 	#lai parbauditu, vai ir vel neaizsutiti velejumi
 	unused = filter(lambda elem: elem['used'] == 0, insults)
@@ -51,5 +48,3 @@ try:
 		f.close()
 except Exception as e:
 	print(e)
-finally:
-	print("</tika lidz beigam>") #parbaudei
