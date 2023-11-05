@@ -10,7 +10,7 @@ from email.message import EmailMessage
 port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
 sender_email = "vards.uzvards.69420@gmail.com"  # Enter your address
-receiver_email = "arnis.prieditis19@gmail.com"  # Enter receiver address: adamovics222@gmail.com
+receiver_email = "adamovics222@gmail.com"  # Enter receiver address
 
 proj_dir = os.path.dirname(os.path.abspath(__file__))
 zinu_fails = proj_dir + '/zinas.json' #saraksts ar objektiem {"text": "", "used": 0}
