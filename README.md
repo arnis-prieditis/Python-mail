@@ -22,7 +22,7 @@ Skripts un "avots", no kura pievieno jaunas rindas zinas.json failā, neizmainot
 Izprintē, cik neizmantotas ziņas vēl ir palikušas.
 
 ## Konfidenciāli dati
-Saņēmēja e-pastam ir jāglabājas failā "laimigais.txt".  
+(šobrīd nestrādā) Saņēmēja e-pastam ir jāglabājas failā "laimigais.txt".  
 App password no sūtītāja e-pasta ir jāglabā failā "parole.txt".
 
 ## Bildes
@@ -36,7 +36,7 @@ E-pasts tiek sūtīts katru nedēļu pirmdien plkst. 7:00.
 
 ## Papildus info
 Sūtītāja adrese ir vards.uzvards.69420@gmail.com - dummy epasts, 
-kuram ir izveidota app password, kas ir cieti iekodēta skriptā. 
+kuram ir izveidota app password, kas glabājas "parole.txt" failā uz telefona.
 
 ## TODO
-- Varbūt drošības pēc to app password vajadzētu glabāt atsevišķā failā, kas eksistēs tikai uz tā telefona, lai github repozitorijā tā nerādītos.
+- Varbūt salabot to lietu, ka encoding salūzt, ja lasa saņēmēja epastu no faila (notiek tikai uz telefona(python3.11), no datora(python3.10) nekādu problēmu) 
