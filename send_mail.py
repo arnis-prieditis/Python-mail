@@ -10,10 +10,15 @@ from email.utils import make_msgid
 #mainigie epasta lietam
 port = 465  # For SSL
 smtp_server = "smtp.gmail.com"
-sender_email = "vards.uzvards.69420@gmail.com"  # Enter your address
-receiver_email = "adamovics222@gmail.com"  # Enter receiver address
-
+sender_email = "vards.uzvards.69420@gmail.com"
+receiver_email = ""
 proj_dir = os.path.dirname(os.path.abspath(__file__))
+
+# read receiver email
+path_to_receiver = proj_dir + "/laimigais.txt"
+with open(path_to_receiver, "r") as receiver_file:
+	receiver_email = receiver_file.readline()
+	receiver_email.strip()
 
 #atver un ielade sarakstu ar novelejumiem
 path_to_zinas = proj_dir + '/zinas.json' #saraksts ar objektiem {"text": "", "used": 0}
@@ -74,7 +79,11 @@ else:
 		msg.set_content(saturs)
 
 	#zinas nosutisana ar smtplib un ssl
-	parole = 'wfsfltjdgnrtbtdn' #app password
+	parole = "" # app password is read from file
+	path_to_parole = proj_dir + "/parole.txt"
+	with open(path_to_parole, "r") as pswd_file:
+		parole = pswd_file.readline()
+		parole.strip()
 	context = ssl.create_default_context()
 	with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
 		server.login(sender_email, parole)
