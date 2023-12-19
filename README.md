@@ -21,6 +21,10 @@ Skripts un "avots", no kura pievieno jaunas rindas zinas.json failā, neizmainot
 ### cik_palika.py
 Izprintē, cik neizmantotas ziņas vēl ir palikušas.
 
+## Konfidenciāli dati
+Saņēmēja e-pastam ir jāglabājas failā "laimigais.txt".  
+App password no sūtītāja e-pasta ir jāglabā failā "parole.txt".
+
 ## Bildes
 Tagad var pievienot ziņām bildes. Bet tad tās ir jāglabā mapē "images" un
 ziņas tekstam jāpievieno beigās ":/images/pareizs_nosaukums.jpg".
