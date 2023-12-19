@@ -6,7 +6,8 @@ Python skripts, kas reizi nedēļā Andrim uz e-pastu atsūta kādu jauku ziņu.
 Galvenais skripts, kas jāpalaiž, lai nosūtītu e-pastu.
 
 ### zinas.json
-Fails, no kura tiek ņemtas ziņas, ko sūtīt. Tas ir saraksts no vārdnīcām ar laukiem "text" un "used", lai skripts noteiktu, vai ziņa jau ir bijusi nosūtīta.
+Fails, no kura tiek ņemtas ziņas, ko sūtīt. Tas ir saraksts no vārdnīcām 
+ar laukiem "text" un "used", lai skripts noteiktu, vai ziņa jau ir bijusi nosūtīta.
 
 ### sent.log
 Log fails, kurā pēc katras ziņas nosūtīšanas ieraksta nosūtīšanas datumu un ziņas tekstu.
@@ -20,12 +21,18 @@ Skripts un "avots", no kura pievieno jaunas rindas zinas.json failā, neizmainot
 ### cik_palika.py
 Izprintē, cik neizmantotas ziņas vēl ir palikušas.
 
+## Bildes
+Tagad var pievienot ziņām bildes. Bet tad tās ir jāglabā mapē "images" un
+ziņas tekstam jāpievieno beigās ":/images/pareizs_nosaukums.jpg".
+
 ## Setup
-Šobrīd šie faili atrodas uz android telefona, kurā ir ielādēts Termux. Automātiskā, regulārā skripta palaišana tiek nodrošināta ar crontab/cronjob. E-pasts tiek sūtīts katru nedēļu pirmdien plkst. 7:00.
+Šobrīd šie faili atrodas uz android telefona, kurā ir ielādēts Termux. 
+Automātiskā, regulārā skripta palaišana tiek nodrošināta ar crontab/cronjob. 
+E-pasts tiek sūtīts katru nedēļu pirmdien plkst. 7:00.
 
 ## Papildus info
-Sūtītāja adrese ir vards.uzvards.69420@gmail.com - dummy epasts, kuram ir izveidota app password, kas ir cieti iekodēta skriptā. 
+Sūtītāja adrese ir vards.uzvards.69420@gmail.com - dummy epasts, 
+kuram ir izveidota app password, kas ir cieti iekodēta skriptā. 
 
 ## TODO
 - Varbūt drošības pēc to app password vajadzētu glabāt atsevišķā failā, kas eksistēs tikai uz tā telefona, lai github repozitorijā tā nerādītos.
-- Varētu pievienot funkcionalitāti priekš attēlu sūtīšanas. 
