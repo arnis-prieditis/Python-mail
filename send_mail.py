@@ -14,12 +14,6 @@ sender_email = "vards.uzvards.69420@gmail.com"
 receiver_email = ""
 proj_dir = os.path.dirname(os.path.abspath(__file__))
 
-# read receiver email
-path_to_receiver = proj_dir + "/laimigais.txt"
-with open(path_to_receiver, "r") as receiver_file:
-	receiver_email = receiver_file.readline()
-	receiver_email.strip()
-
 #atver un ielade sarakstu ar novelejumiem
 path_to_zinas = proj_dir + '/zinas.json' #saraksts ar objektiem {"text": "", "used": 0}
 with open(path_to_zinas, 'r') as f:
