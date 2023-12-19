@@ -27,7 +27,7 @@ if(len(list(unused)) == 0):
 	print('Vajag jaunus novelejumus')
 else:
 	#dabu poziciju vienam no vel neizmantotajiem
-	pos = random.randint(1, len(insults)-1)
+	pos = random.randint(0, len(insults)-1)
 	while insults[pos]['used'] == 1:
 		pos = random.randint(0, len(insults)-1)
 
