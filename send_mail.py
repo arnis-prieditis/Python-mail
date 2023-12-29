@@ -1,4 +1,3 @@
-#vel vajag noformet pasas zinas saturu, lai visas rindas aizsuta
 import os
 import json #json faila apstradei
 import random
@@ -86,4 +85,4 @@ else:
 	#nomaina izlietotas zinas statusu ('used':0 -> 'used':1) un ieraksta visu atpakal json failaa
 	insults[pos]['used'] = 1
 	with open(path_to_zinas, 'w') as f:
-		json.dump(insults, f)
+		json.dump(insults, f, indent=4)
