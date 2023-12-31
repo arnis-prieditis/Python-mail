@@ -14,4 +14,4 @@ with open(zinas_txt_path, "r") as txt_file:
             list_of_dict.append({"text": line.strip(), "used": 0})
 
 with open(zinas_json_path, "w") as json_file:
-    json.dump(list_of_dict, json_file)
+    json.dump(list_of_dict, json_file, indent=4)
