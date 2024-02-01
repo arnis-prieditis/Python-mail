@@ -68,6 +68,13 @@ else:
 		path_to_img = proj_dir + msg_with_image[1]
 		with open(path_to_img, 'rb') as img:
 			msg.get_payload()[1].add_related(img.read(), 'image', 'jpeg', cid=img_cid)
+	elif ":/attach/" in saturs:
+		msg_with_file = saturs.split(":")
+		msg.set_content(msg_with_file[0])
+		path_to_file = proj_dir + msg_with_file[1]
+		with open(path_to_file, 'rb') as attachment:
+			file_data = attachment.read()
+		msg.add_attachment(file_data, maintype='application', subtype='pdf', filename=((msg_with_file[1]).split("/"))[-1])
 	else:
 		msg.set_content(saturs)
 
