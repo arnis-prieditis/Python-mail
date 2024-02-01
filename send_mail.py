@@ -32,12 +32,6 @@ else:
 	#ieliek zinas saturu mainigaja
 	saturs = insults[pos]['text']
 
-	# lai piefiksetu aizsutito
-	log_file_path = proj_dir + '/sent.log'
-	with open(log_file_path, 'a') as log:
-		log.write(f"Date: {date.today()}\n")
-		log.write(f"Ziņa: {saturs}\n\n")
-
 	# zinas noformesana
 	msg = EmailMessage()
 	msg['Subject'] = 'Tavs Iknedēļas Vēstnesis'
@@ -93,3 +87,9 @@ else:
 	insults[pos]['used'] = 1
 	with open(path_to_zinas, 'w') as f:
 		json.dump(insults, f, indent=4)
+	
+	# lai piefiksetu aizsutito
+	log_file_path = proj_dir + '/sent.log'
+	with open(log_file_path, 'a') as log:
+		log.write(f"Date: {date.today()}\n")
+		log.write(f"Ziņa: {saturs}\n\n")
