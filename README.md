@@ -26,8 +26,9 @@ Izprintē, cik neizmantotas ziņas vēl ir palikušas.
 App password no sūtītāja e-pasta ir jāglabā failā "parole.txt".
 
 ## Bildes
-Tagad var pievienot ziņām bildes. Bet tad tās ir jāglabā mapē "images" un
-ziņas tekstam jāpievieno beigās ":/images/pareizs_nosaukums.jpg".
+Ziņām var pievienot bildes un PDF failus. Bet tad bildes ir jāglabā mapē "images" un
+ziņas tekstam jāpievieno beigās ":/images/pareizs_nosaukums.jpg". Un attiecīgi PDF
+failus glabā mapē "attach" un ziņas tekstam pievieno ":/attach/pareizs_nosaukums.pdf".
 
 ## Setup
 Šobrīd šie faili atrodas uz android telefona, kurā ir ielādēts Termux. 
@@ -39,4 +40,4 @@ Sūtītāja adrese ir vards.uzvards.69420@gmail.com - dummy epasts,
 kuram ir izveidota app password, kas glabājas "parole.txt" failā uz telefona.
 
 ## TODO
-- Varbūt salabot to lietu, ka encoding salūzt, ja lasa saņēmēja epastu no faila (notiek tikai uz telefona(python3.11), no datora(python3.10) nekādu problēmu) 
+- Varbūt salabot to lietu, ka encoding salūst, ja lasa saņēmēja epastu no faila (notiek tikai uz telefona(python3.11), no datora(python3.10) nekādu problēmu) 
