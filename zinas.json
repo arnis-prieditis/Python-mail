@@ -122,5 +122,29 @@
     {
         "text": ":/images/kapt.jpg",
         "used": 1
+    },
+    {
+        "text": ":/images/drown-epasti.jpg",
+        "used": 0
+    },
+    {
+        "text": ":/images/gru-epasti.jpg",
+        "used": 0
+    },
+    {
+        "text": ":/images/math-beef.jpg",
+        "used": 0
+    },
+    {
+        "text": ":/images/scary-epasti.jpg",
+        "used": 0
+    },
+    {
+        "text": ":/images/semki-jest.jpg",
+        "used": 0
+    },
+    {
+        "text": ":/images/tonight-epasti.jpg",
+        "used": 0
     }
 ]
